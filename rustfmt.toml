@@ -1,1 +1,8 @@
 edition = "2021"
+max_width = 140
+chain_width = 100
+fn_call_width = 100
+#format_macro_bodies = false
+ignore = [
+    "src/main.rs",
+]
