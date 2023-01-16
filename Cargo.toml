@@ -3,16 +3,25 @@ name = "nostr-rs-bench"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "random_event_eose_concurrent"
+path = "src/random_event_eose_concurrent.rs"
+
+[[bin]]
+name = "specific_req"
+path = "src/specific_req.rs"
+
 [dependencies]
 clap = { version="4", features=["derive", "cargo"]}
 anyhow = "1.0"
 log = "0.4"
 env_logger = "0.9.0"
 serde_json = "1.0"
-tokio-tungstenite = "0.17"
+tokio-tungstenite = { version = "0.17", features=["native-tls"]}
 tungstenite = "0.17"
 tokio = { version = "1", features = ["full", "signal"] }
 governor = "0.5"
 futures = "0.3"
 futures-util = "0.3"
 rand = "0.8.4"
+hex = "0.4"
